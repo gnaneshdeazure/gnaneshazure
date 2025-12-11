@@ -1,0 +1,68 @@
+{
+	"name": "Json5",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"file": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().file",
+					"type": "Expression"
+				},
+				"folderPath": "input",
+				"fileSystem": "mine"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"_credit": {
+					"type": "string"
+				},
+				"greetings": {
+					"type": "object",
+					"properties": {
+						"english": {
+							"type": "string"
+						},
+						"japanese": {
+							"type": "string"
+						},
+						"arabic": {
+							"type": "string"
+						},
+						"russian": {
+							"type": "string"
+						},
+						"hindi": {
+							"type": "string"
+						}
+					}
+				},
+				"name": {
+					"type": "string"
+				},
+				"age": {
+					"type": "integer"
+				},
+				"email": {
+					"type": "string"
+				},
+				"isActive": {
+					"type": "boolean"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

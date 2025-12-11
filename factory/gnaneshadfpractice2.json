@@ -1,0 +1,9 @@
+{
+	"name": "gnaneshadfpractice2",
+	"location": "centralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a0d8a35a-c9b1-4917-bfe6-09d31a4231c1",
+		"tenantId": "ba4c2fa3-4262-478c-a6f3-b1eefb23be5a"
+	}
+}
